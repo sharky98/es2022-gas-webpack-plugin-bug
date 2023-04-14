@@ -1,0 +1,1 @@
+export { doGet } from "../doGet";

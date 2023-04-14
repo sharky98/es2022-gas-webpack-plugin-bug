@@ -1,0 +1,42 @@
+{
+  "extends": [
+    "@tsconfig/recommended/tsconfig.json",
+    "@tsconfig/node18/tsconfig.json",
+    "@tsconfig/esm/tsconfig.json",
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/create-react-app/tsconfig.json"
+  ],
+  "compilerOptions": {
+    /* Modules */
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    /* Emit */
+    "noEmit": false,
+    "verbatimModuleSyntax": false,
+    /* Language and Environment */
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "target": "ES2022"
+  },
+  "include": [
+    "src",
+    "dev"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  /* For WebPack Config */
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "verbatimModuleSyntax": false
+    },
+    "include": [
+      "config/webpack",
+      "webpack.config.ts"
+    ]
+  }
+}
