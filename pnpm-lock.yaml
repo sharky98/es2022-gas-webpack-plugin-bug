@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^1.1.1
     version: 1.1.1
   gas-webpack-plugin:
-    specifier: ^2.3.0
-    version: 2.3.0
+    specifier: ^2.5.0
+    version: 2.5.0
   rimraf:
     specifier: ^5.0.0
     version: 5.0.0
@@ -1625,19 +1625,19 @@ packages:
       uuid: 9.0.0
     dev: true
 
-  /gas-entry-generator@2.2.0:
-    resolution: {integrity: sha512-4xKGmL9PbocIP6vrk9rUqO3XzehJmnnCkQHF8UeLlGDLvmzt2TlZk4YqUDLTmq/3XJk34en3KOLKJj4btzhTMQ==}
+  /gas-entry-generator@2.5.1:
+    resolution: {integrity: sha512-grd9Qvbm8AgyoDlUCKsbLpPVBFQm+Giv/7xmcINLSQfCELIxg6Cb/C2bOYfqZFjWhsGYwU2ZrWy3mt2XtWjHKA==}
     dependencies:
       escodegen: 2.0.0
       esprima-next: 5.8.4
       estraverse: 5.3.0
     dev: true
 
-  /gas-webpack-plugin@2.3.0:
-    resolution: {integrity: sha512-TPJ2Xfaewetvg3lVGiE9Pk62/ZNF3WIxloasOsEnJSs1A++K5hBKNBvvhpX+221XP8/NvPsz+0K2CGDEeJvebQ==}
+  /gas-webpack-plugin@2.5.0:
+    resolution: {integrity: sha512-qk5lOacJYY9Hqa2X/VTys+MfsYZawraGbmQRyQ34qak8BN/kHBxXt2Bav+sJ+Bf4bYRZc/Z7gKrNiAr1OWGmAA==}
     dependencies:
-      gas-entry-generator: 2.2.0
-      minimatch: 5.1.6
+      gas-entry-generator: 2.5.1
+      minimatch: 7.4.6
       slash: 3.0.0
       webpack-sources: 3.2.3
     dev: true
@@ -2431,8 +2431,8 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
-  /minimatch@5.1.6:
-    resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
+  /minimatch@7.4.6:
+    resolution: {integrity: sha512-sBz8G/YjVniEz6lKPNpKxXwazJe4c19fEfV2GDMX6AjFz+MX9uDWIZW8XreVhkFW3fkIdTv/gxWr/Kks5FFAVw==}
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: 2.0.1

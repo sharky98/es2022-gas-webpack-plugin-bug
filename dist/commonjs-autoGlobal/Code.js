@@ -1,11 +1,10 @@
-var global = this;
 function doGet() {
 }/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
 /* 1 */
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
@@ -48,6 +47,19 @@ exports.doGet = doGet;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
@@ -57,7 +69,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.doGet = void 0;
 var doGet_1 = __webpack_require__(1);
 Object.defineProperty(exports, "doGet", ({ enumerable: true, get: function () { return doGet_1.doGet; } }));
-global.doGet = exports.doGet;
+__webpack_require__.g.doGet = __webpack_exports__.doGet;
 })();
 
 /******/ })()
