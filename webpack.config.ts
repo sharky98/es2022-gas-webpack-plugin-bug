@@ -52,6 +52,23 @@ const es2022AutoGlobal: Configuration = {
   ]
 };
 
+const es2022ExportConstAutoGlobal: Configuration = {
+  ...commonConfig,
+  entry: "./src/es2022-exportConstAutoGlobal/main.ts",
+  name: "es2022ExportConstAutoGlobal",
+  module: { rules: [{ test: /(\.ts)$/, loader: "ts-loader" }] },
+  output: {
+    ...commonConfig.output,
+    path: `${__dirname}/dist/es2022-exportConstAutoGlobal`
+  },
+  plugins: [
+    new GasPlugin({
+      autoGlobalExportsFiles: ["./src/es2022-exportConstAutoGlobal/main.ts"]
+    }),
+    copyPlugin
+  ]
+};
+
 const commonJsAutoGlobal: Configuration = {
   ...commonConfig,
   entry: "./src/commonjs-autoGlobal/main.ts",
@@ -80,4 +97,4 @@ const commonJsAutoGlobal: Configuration = {
   ]
 };
 
-export default [es2022Global, es2022AutoGlobal, commonJsAutoGlobal];
+export default [es2022Global, es2022AutoGlobal, commonJsAutoGlobal, es2022ExportConstAutoGlobal];
