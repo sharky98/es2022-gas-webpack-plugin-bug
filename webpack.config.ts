@@ -52,35 +52,35 @@ const es2022AutoGlobal: Configuration = {
   ]
 };
 
-const es2022ExportConstAutoGlobal: Configuration = {
+const es2022AutoGlobalDeclarationExport: Configuration = {
   ...commonConfig,
-  entry: "./src/es2022-exportConstAutoGlobal/main.ts",
-  name: "es2022ExportConstAutoGlobal",
+  entry: "./src/es2022-autoGlobal-declarationExport/main.ts",
+  name: "es2022AutoGlobalDeclarationExport",
   module: { rules: [{ test: /(\.ts)$/, loader: "ts-loader" }] },
   output: {
     ...commonConfig.output,
-    path: `${__dirname}/dist/es2022-exportConstAutoGlobal`
+    path: `${__dirname}/dist/es2022-autoGlobal-declarationExport`
   },
   plugins: [
     new GasPlugin({
-      autoGlobalExportsFiles: ["./src/es2022-exportConstAutoGlobal/main.ts"]
+      autoGlobalExportsFiles: ["./src/es2022-autoGlobal-declarationExport/main.ts"]
     }),
     copyPlugin
   ]
 };
 
-const es2022SelfExportAutoGlobal: Configuration = {
+const es2022AutoGlobalListExport: Configuration = {
   ...commonConfig,
-  entry: "./src/es2022-selfExportAutoGlobal/main.ts",
-  name: "es2022SelfExportAutoGlobal",
+  entry: "./src/es2022-autoGlobal-listExport/main.ts",
+  name: "es2022AutoGlobalListExport",
   module: { rules: [{ test: /(\.ts)$/, loader: "ts-loader" }] },
   output: {
     ...commonConfig.output,
-    path: `${__dirname}/dist/es2022-selfExportAutoGlobal`
+    path: `${__dirname}/dist/es2022-autoGlobal-listExport`
   },
   plugins: [
     new GasPlugin({
-      autoGlobalExportsFiles: ["./src/es2022-selfExportAutoGlobal/main.ts"]
+      autoGlobalExportsFiles: ["./src/es2022-autoGlobal-listExport/main.ts"]
     }),
     copyPlugin
   ]
@@ -114,4 +114,4 @@ const commonJsAutoGlobal: Configuration = {
   ]
 };
 
-export default [es2022Global, es2022AutoGlobal, commonJsAutoGlobal, es2022ExportConstAutoGlobal, es2022SelfExportAutoGlobal];
+export default [es2022Global, es2022AutoGlobal, commonJsAutoGlobal, es2022AutoGlobalDeclarationExport, es2022AutoGlobalListExport];
